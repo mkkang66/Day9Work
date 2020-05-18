@@ -15,15 +15,15 @@
             <p><input type='submit'></p>
         </form>
         <hr>
-        {% for link, title in msg %}
         <div>
-            <ul>
+            <ol>
+                {% for link, title in msg %}
                 <li>
-                    <a href='/news/words?url={{ link }}'>{{ title}}</a>
+                    <p><a href='/news/words?url={{ link }}'>{{ title}}</a></p>
                 </li>
-            </ul>
+                {% endfor %}
+            </ol>
         </div> <!-- /news/words?url=<해당뉴스의 url>" -->
-        {% endfor %}
     </div>
 </body>
 
