@@ -99,7 +99,7 @@ if __name__ == "__main__":
             return render_template("join.html", msg="ID 중복입니다. 다시 가입하세요.")
 
         # 신규 등록
-        query = f"""INSERT INTO `author` VALUES (id, '{ userid }', '{ password }', SHA2('{ profile }', 256));"""
+        query = f"""INSERT INTO `author` VALUES (id, '{ userid }', '{ profile }', SHA2('{ password }', 256));"""
         cursor = db.cursor()
         cursor.execute(query)
         db.commit()
