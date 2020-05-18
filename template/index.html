@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-Main</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1><a href="/">WEB</a> - Main</h1>
+    <div id="container">
+        {% if is_logged_in %}
+        <p>{{ user }}님, 환영합니다.</p>
+        <a href="/logout">로그아웃</a>
+        <a href="/withdrawal">회원탈퇴</a>
+        {% else %}
+        <a href="/login">로그인</a>
+        <a href="/join">회원가입</a>
+        {% endif %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-Word Counting</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1><a href="/">WEB</a> - News Word Counting</h1>
+    <div id="container">
+        <p>
+        <ul>
+            {% if msg %}
+            <li>
+                {{ msg }}
+            </li>
+            {% endif %}
+            {% for e in words %}
+            <li>{{ e.get('word') }} : {{ e.get('count') }}</li>
+            {% endfor %}
+        </ul>
+        </p>
+    </div>
+</body>
+
+</html>

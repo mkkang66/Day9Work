@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-News Ranking</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1><a href="/">WEB</a> - News ranking</h1>
+    <div id="container">
+        <form action='/news/ranking' method='post'>
+            <p><input type='text' name='date' placeholder='날짜'></p>
+            <p><input type='submit'></p>
+        </form>
+        <hr>
+        {% for link, title in msg %}
+        <div>
+            <ul>
+                <li>
+                    <a href='/news/words?url={{ link }}'>{{ title}}</a>
+                </li>
+            </ul>
+        </div> <!-- /news/words?url=<해당뉴스의 url>" -->
+        {% endfor %}
+    </div>
+</body>
+
+</html>

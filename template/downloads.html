@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-Downloads</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>구글 검색 이미지 다운로드: {{ keyword }}</h1>
+    <hr>
+    {% for i in img_link %}
+    <p><img src='{{ i }}'></p>
+    {% endfor %}
+</body>
+
+</html>

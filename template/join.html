@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-Join</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1><a href="/">WEB</a> - Join</h1>
+    <div id="container">
+        <form action='/join' method='post'>
+            <p><input type='text' name='userid' placeholder='userid'></p>
+            <p><input type='password' name='password' placeholder='password'></p>
+            <p><input type='text' name='profile' placeholder='프로필'></p>
+            <p><input type='submit'></p>
+        </form>
+        <div>{{ msg }}</div>
+    </div>
+</body>
+
+</html>

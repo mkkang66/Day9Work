@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-Withdrawal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1><a href="/">WEB</a> - Withdrawal</h1>
+    <div id="container">
+        <form action='/withdrawal' method='post'>
+            <p><input type='password' name='password' placeholder='password'></p>
+            <p><input type='submit'></p>
+        </form>
+        <div>{{ msg }}</div>
+    </div>
+</body>
+
+</html>
